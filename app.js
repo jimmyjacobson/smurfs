@@ -14,13 +14,18 @@ app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get("/", function(req, res, next){
-
-  
-    res.render("index", {
-      appType: "Smurfopolis"
-    })
-  
-
+    SmurfModel.SmurfModel.find()
+      .then(function(searchResults) {
+        res.render('index', {
+          smurfs: searchResults,
+          appType: "All the Smurfs"
+        })
+      })
+      .catch(function(error) {
+        res.render('index', {
+          appType: "Error"
+        })
+      })
 })
 
 app.post("/smurf", function(req, res, next) {

@@ -39,5 +39,6 @@ function createSmurf(data, callback) {
 
 module.exports = {
   getAllSmurfs: getAllSmurfs,
-  createSmurf: createSmurf
+  createSmurf: createSmurf,
+  SmurfModel: SmurfModel
 }
