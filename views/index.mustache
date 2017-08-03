@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <h1>Hello, Welcome to {{appType}}!</h1>
+  <div>
+    <h2>Add a Smurf</h2>
+    <form method="POST" action="/smurf">
+      <div>
+        <label>Smurf's Name</label>
+        <input type="text" name="name"/>
+      </div>
+      <div>
+        <label>Smurf's Color</label>
+        <select name="color">
+          <option>blue</option>
+        </select>
+      </div>
+      <div>
+        <label>
+          Smurf's Picture
+        </label>
+        <input type="text" name="pictureUrl"/>
+      </div>
+      <div>
+        <input type="submit" value="Add Smurf"/>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
