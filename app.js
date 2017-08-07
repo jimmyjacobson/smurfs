@@ -94,11 +94,7 @@ app.post('/submit/smurf', function(req, res) {
           //3. I want to send my user back to the index page
           res.redirect('/');
         })
-    });
-  
-  
-      
-      
+    });   
 });
 
 app.listen(3000, function(){
